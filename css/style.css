@@ -1,9 +1,67 @@
 html {
-  //background-attachment: fixed;
   height: 100%;
   width: 100%;
 }
 body {
   font-family: calibri;
   text-align: center;
+}
+
+svg{
+  width: 500px;
+  height: 500px;
+}
+
+svg circle{
+  fill:red;
+  cx: 250;
+  cy: 250;
+  r: 40;
+}
+
+svg ellipse{
+  fill:#00ff00;
+  cx: 250;
+  cy: 250;
+}
+
+@-webkit-keyframes rotation /* Safari et Chrome */ {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+#forme {
+  -webkit-animation: rotation 2s linear infinite;
+  -moz-animation: rotation 2s linear infinite;
+  -ms-animation: rotation 2s linear infinite;
+  -o-animation: rotation 2s linear infinite;
+  animation: rotation 2s linear infinite;
+  transform-origin: center;
 }
