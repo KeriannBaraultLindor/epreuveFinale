@@ -23,13 +23,16 @@
 
 			<!--Première forme SVG-->
 			<svg height="500" width="500">
-				<g>
-				  	<circle cx="250" cy="250" r="40" stroke="none" stroke-width="0" fill="red" />
-				  	<ellipse cx="250" cy="250" rx="75" ry="13" fill="#00ff00"/>
-				  	<ellipse cx="250" cy="250" rx="13" ry="75" fill="#00ff00"/>
-			  	</g>
-			</svg>
+				<defs>
+					<g id="forme">
+					  	<circle cx="250" cy="250" r="40" stroke="none" stroke-width="0" fill="red" />
+					  	<ellipse cx="250" cy="250" rx="75" ry="13" fill="#00ff00"/>
+					  	<ellipse cx="250" cy="250" rx="13" ry="75" fill="#00ff00"/>
+				  	</g>
+				</defs>
 
+				<use xlink:href="#forme" /><!--J'utilise USE pour afficher la forme SVG-->
+			</svg>
 		</div>
 		
 	</body>
